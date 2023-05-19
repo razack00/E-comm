@@ -1,0 +1,34 @@
+body {
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    gap: 20px;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input {
+    padding: 15px;
+    outline: none;
+}
+
+.error {
+    color: red
+}
+
+.strong {
+    color: green
+}
