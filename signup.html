@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link rel="stylesheet" href="signup.css">
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('form')
+            const password = document.querySelector('#password')
+            const cpass = document.querySelector('#confirm')
+            
+            password.onkeyup = () => {
+                const pswdValue = password.value
+                const pswdlength = pswdValue.length
+                const message = document.querySelector('.message')
+                if(pswdlength < 6) { 
+                    password.style.border = '2px solid red'
+                    message.innerHTML = `<span class="error">weak</span>`
+                }
+                else if(pswdlength >= 6) {
+                    password.style.border = "2px solid green"
+                    message.innerHTML = `<span class="strong">strong</span>`
+                }
+
+                else {
+                    message.innerHTML = `<span class="strong">very strong</span>`
+                }
+
+            }
+
+            cpass.onblur = () => {
+                const passValue = password.value
+                const cpassValue = cpass.value
+                const message = document.querySelector('.confirm-message')
+                if(passValue !== cpassValue) { 
+                    cpass.style.border = '2px solid red'
+                    message.innerHTML = `<span class="error">passwords do not match</span>`
+                }
+
+                else {
+                    cpass.style.border = '2px solid green'
+                    message.innerHTML = ``
+                }
+
+            }
+            
+            
+            submit.onclick = (e) => {
+                e.preventDefault()
+                const formData = new FormData(form)
+                const fname = formData.get('firstName')
+                const lname = formData.get('lastName')
+                const email = formData.get('email')
+                const password = formData.get('password')
+                const cpassword = formData.get('confirm')
+
+                if(fname == '' || lname == '' || email == '' || password == '' || cpassword || '') {
+                    alert('Please filled out all required fields')
+                    return
+                }
+            }
+         })
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="firstName">
+            <span>First Name</span>
+            <input type="text" name="firstName" placeholder="First Name" id="firstName">
+        </label>
+        <label for="lastName">
+            <span>Last Name</span>
+            <input type="text" name="lastName" placeholder="Last Name" id="lastName">
+        </label>
+        <label for="email">
+            <span>Email</span>
+            <input type="email" name="email" id="email" placeholder="email">
+        </label>
+        <label for="password">
+            <span>Password</span>
+            <input type="password" name="password" id="password" placeholder="Password">
+            <div class="message">
+            </div>
+        </label>
+        <label for="confirm">
+            <span>Confirm Password</span>
+            <input type="password" name="confirm" id="confirm" placeholder="confirm password">
+            <div class="confirm-message">
+            </div>
+        </label>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+</body>
+</html>
