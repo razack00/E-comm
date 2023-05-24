@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign In</title>
+    <link rel="stylesheet" href="signup.css">
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = JSON.parse(localStorage.getItem('user'))
+            const form = document.querySelector('form');
+            
+            // when the form is submitted
+            form.onsubmit = (e) => {
+                e.preventDefault();
+                const formData = new FormData(form);
+
+                const email = formData.get('email');
+                const password = formData.get('password');
+
+                if ( email === '' || password === '') {
+                    alert('Please fill all required fields');
+                    return;
+                }
+                
+                if(user.email === email && user.password === password) {
+                    window.location.href = "index.html";
+                }
+                else {
+                    return
+                    const message = document.querySelector('.message').textContent = 'hello'
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <form action="">
+        <h1>sign In</h1>
+        <label for="email">
+            <span>Email</span>
+            <input type="email" name="email" id="email" placeholder="email">
+        </label>
+        <label for="password">
+            <span>Password</span>
+            <input type="password" name="password" id="password" placeholder="Password">
+            <div class="message">
+            </div>
+        </label>
+        <span class="message">Invalid detail <a href="./signup.html">Sign up</a> if you don't have an account</span>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+</body>
+</html>
