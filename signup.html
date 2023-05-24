@@ -7,28 +7,26 @@
     <title>sign up</title>
     <link rel="stylesheet" href="signup.css">
     <script defer>
+
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.querySelector('form')
             const password = document.querySelector('#password')
             const cpass = document.querySelector('#confirm')
+            const select = document.querySelector('select')
             
+            // password validation
             password.onkeyup = () => {
                 const pswdValue = password.value
                 const pswdlength = pswdValue.length
                 const message = document.querySelector('.message')
-                if(pswdlength < 6) { 
-                    password.style.border = '2px solid red'
-                    message.innerHTML = `<span class="error">weak</span>`
-                }
-                else if(pswdlength >= 6) {
-                    password.style.border = "2px solid green"
-                    message.innerHTML = `<span class="strong">strong</span>`
-                }
 
+                // password length validation
+                if (pswdlength > 6) { 
+                    password.style.border = '2px  solid green'
+                }
                 else {
-                    message.innerHTML = `<span class="strong">very strong</span>`
+                    password.style.border = '2px solid red'
                 }
-
             }
 
             cpass.onblur = () => {
@@ -39,14 +37,12 @@
                     cpass.style.border = '2px solid red'
                     message.innerHTML = `<span class="error">passwords do not match</span>`
                 }
-
                 else {
                     cpass.style.border = '2px solid green'
                     message.innerHTML = ``
                 }
 
-            }
-            
+            } 
             
             submit.onclick = (e) => {
                 e.preventDefault()
@@ -57,16 +53,29 @@
                 const password = formData.get('password')
                 const cpassword = formData.get('confirm')
 
-                if(fname == '' || lname == '' || email == '' || password == '' || cpassword || '') {
+                if(fname == '' || lname == '' || email == '' || password == '' || cpassword == '') {
                     alert('Please filled out all required fields')
                     return
                 }
+                localStorage.setItem(
+                    "user",
+                    JSON.stringify({
+                        firstName: fname,
+                        lastName: lname,
+                        email: email,
+                        password: password,
+                    })
+                )
+                window.location.href = "signin.html";
+                form.reset
             }
          })
+
     </script>
 </head>
 <body>
     <form action="">
+        <h1>Sign Up</h1>
         <label for="firstName">
             <span>First Name</span>
             <input type="text" name="firstName" placeholder="First Name" id="firstName">
@@ -92,6 +101,7 @@
             </div>
         </label>
         <input type="submit" id="submit" value="Submit">
+        <p>Already have an account? <a href="./signin.html">sign in</a></p>
     </form>
 </body>
 </html>
