@@ -1,14 +1,19 @@
 *, *::after, *::before {
     margin: 0;
     padding: 0px;
+    list-style: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
 }
 
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
 }
 
-header {
+.store-header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,10 +23,84 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 30vh;
+    height: 40vh;
     color: #fff;
     gap: 10px;
+    /* margin-top: 10rem; */
 }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: absolute;
+    width: 95%;
+    background-color: white
+}
+
+nav .logo {
+    background-color: rgb(50, 50, 50);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family:cursive;
+    font-style: italic;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+nav ul li {
+    padding-inline: 1.5rem;
+}
+
+nav .useracc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+} 
+
+nav .useracc .user {
+    font-size: 1rem;
+    font-family: cursive;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+nav .useracc button {
+    padding: 2px 9px;
+    border-radius: 3px;
+    background-color: coral;
+    cursor: pointer;
+}
+
+nav .useracc button:hover{
+    transform: scale(1.06);
+    opacity: 1;
+    background-color: rgb(253, 107, 54);
+}
+
+/* .dropdown{
+    position: absolute;
+    background-color: #fff;
+    border-radius: 0.4rem;
+    top: 1.3rem;
+    padding: 1rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    display: none;
+} */
 
 header form {
     width: fit-content;
