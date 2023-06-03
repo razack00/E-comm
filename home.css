@@ -1,0 +1,46 @@
+:root {
+    --black: #000;
+    --blue:#1C69D4;
+    --hover-blue:#0653B6;
+    --border-color: rgba(212, 212, 212, 0.7);
+    --dark-gray: #262626;
+    --grey: #6b6b6b;
+    --light-grey: rgb(214, 211, 211);
+    --lightest-grey: rgba(223, 219, 219, 0.7);
+    --white: #fff;
+    
+    --border-hover-color:var(--blue);
+    --text-color: var(--dark-gray);
+    --hero-text-color: #fff;
+    --gradient: linear-gradient(90deg, rgba(16,0,36,1) 0%, rgba(66,9,121,1) 35%, rgba(255,0,247,1) 100%);
+    
+    --primary-font: Arial, Helvetica, sans-serif;
+    
+    /* pc font sizes */
+    --title-fs:4.8rem;
+    --fw-light :300;
+    --subtitle-fs: 2.4rem;
+    --text-fs: 1.6rem;
+    --footer-nav-title: 2rem;
+    
+    --icon-fs: 1.8rem;
+    --icon-fw: 400;
+    --btn-fw: 700;
+    --text-fw: 100;
+    
+    /* mobile font sizes */
+    --title-mb-fs: 2.3rem;
+    --title-mb-fw: 700;
+    --subtitle-mb-fs: 1.5rem;
+    --text-mb-fs: 1.125rem;
+}
+.home-header {
+    background: url(./assets/images/sshoe.jpeg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    color: var(--hero-text-color) !important;
+}
+
+/* background:var(--gradient); */

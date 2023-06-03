@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./auth.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">s</div>
+        <ul>
+            <li><a href="home.html">home</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li>
+                <div class="useracc">
+                    <h1 class="user"></h1>
+                    <div class="dropdown btn-wrapper"></div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <header class="home-header">
+            <div class="hero-content flex">
+                <span class="hero-moto flex"><p>The <b style="font-weight: 700;">Ultimate</b> Driving Machine</p></span>
+                <h1 class="title">THE NEW I5</h1>
+                <h2 class="subtitle">COMING SOON: A NEW MEMBER OF THE ALL-ELECTRIC BMW FAMILY</h2>
+                <a href="#" class="btn-colored btn">Keep me Informed</a>
+                <a href="#" class="btn">Discover now</a>
+            </div>
+        </header> 
+    
+        <!-- <section class="cards flex">
+            <div class="card card1">
+                <h2 class="subtitle card-subtitle">New Car Locator</h2>
+                <button class="btn">Search now</button>
+            </div>
+            <div class="card card2">
+                <h2 class="subtitle card-subtitle">New Car Locator</h2>
+                <button class="btn">Search now</button>
+            </div>
+        </section>
+        <div class="message flex">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="chat-icon"><path d="M160 368c26.5 0 48 21.5 48 48v16l72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6H448c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16V352c0 8.8 7.2 16 16 16h96zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3V474.7v-6.4V468v-4V416H112 64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H448c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H309.3L208 492z"/></svg>
+        </div>
+    
+        <section class="get-started flex">
+            <div>
+                <h2 class="subtitle">Get Started</h2>
+                <form action="">
+                    <select name="model" id="model">
+                        <option label="Select Model" value=""></option>
+                        <option value="BMW i4" label="BMW i4">BMW i4</option>
+                        <option value="BMW i5" label="BMW i5">BMW i5</option>
+                    </select>
+                </form>
+            </div>
+            <div>
+                <i class="fa-solid fa-car-rear"></i>
+                <a href="#">Build and price</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-message"></i>
+                <a href="#">Request a virtual appointment</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="#">Ask Our Online Genius</a>
+            </div>
+            <div>
+                &nbsp;
+            </div>
+        </section>
+        <section class="bmw-shop-container container">
+            <div class="bmw-shop">
+                <ul class="secondary-nav shop-nav flex">
+                    <li><a class="active" href="#">Model</a></li>
+                    <li><a href="#">Body Type</a></li>
+                </ul>
+                <ul class="tertiary-nav shop-nav flex">
+                    <span><a href="#"><i class="fa-solid fa-chevron-left"></i></a></span>
+                    <span><a class="active" href="#">i</a></span>
+                    <span><a href="#">X</a></span>
+                    <span><a href="#">M</a></span>
+                    <span><a href="#">8</a></span>
+                    <span><a href="#">7</a></span>
+                    <span><a href="#">5</a></span>
+                    <span><a href="#">4</a></span>
+                    <span><a href="#">3</a></span>
+                    <span><a href="#">2</a></span>
+                    <span><a href="#">1</a></span>
+                    <span><a href="#">PHEV</a></span>
+                    <span><a href="#"><i class="fa-solid fa-chevron-right"></i></a></span>
+                </ul>
+            </div>
+    
+            <div class="shop-cards-container">
+                <div class="shop-card">
+                    <a href="#">
+                        <div class="card-image-container flex">
+                            <img src="./assets/images/electric-icon.webp" alt="electric icon" class="electric-icon">
+                            <img src="./assets/images/car1.png" alt="car-image" class="car">
+                            <img src="./assets/images/bmw-card-icon.png" alt="model-icon" class="model-icon">
+                        </div>
+                    </a>
+                    <div class="card-content flex">
+                        <h2>BMW-XM</h2>
+                        <h3 class="power-source">Electric</h3>
+                        <p class="price-wrapper flex" style="gap: 5px">From<span class="price"> $148,060</span> <i class="fa-solid fa-info info"></i></p>
+                        <span ><i class="fa-solid fa-chevron-right card-angle-bracket"></i><a href="#">Build and price</a></span>
+                        <span ><i class="fa-solid fa-chevron-right card-angle-bracket"></i><a href="#">Build and price</a></span>
+                    </div>
+                </div>
+                <div class="shop-card">
+                    <a href="#">
+                        <div class="card-image-container flex">
+                            <img src="./assets/images/electric-icon.webp" alt="electric icon" class="electric-icon">
+                            <img src="./assets/images/car2.png" alt="car-image" class="car">
+                            <img src="./assets/images/bmw-card-icon.png" alt="model-icon" class="model-icon">
+                        </div>
+                    </a>
+                    <div class="card-content flex">
+                        <h2>BMW-XM</h2>
+                        <h3 class="power-source">Electric</h3>
+                        <p class="price-wrapper flex" style="gap: 5px">From<span class="price"> $148,060</span> <i class="fa-solid fa-info info"></i></p>
+                        <span ><i class="fa-solid fa-chevron-right card-angle-bracket"></i><a href="#">Build and price</a></span>
+                        <span ><i class="fa-solid fa-chevron-right card-angle-bracket"></i><a href="#">Build and price</a></span>
+                    </div>
+                </div>
+                <div class="shop-card">
+                    <a href="#">
+                        <div class="card-image-container flex">
+                            <img src="./assets/images/electric-icon.webp" alt="electric icon" class="electric-icon">
+                            <img src="./assets/images/car3.png" alt="car-image" class="car">
+                            <img src="./assets/images/bmw-card-icon.png" alt="model-icon" class="model-icon">
+                            <span class="badge">New</span>
+                        </div>
+                    </a>
+                    <div class="card-content flex">
+                        <h2>BMW-XM</h2>
+                        <h3 class="power-source">Electric</h3>
+                        <p class="price-wrapper flex" style="gap: 5px">From<span class="price"> $148,060</span> <i class="fa-solid fa-info info"></i></p>
+                        <span ><i class="fa-solid fa-chevron-right card-angle-bracket"></i><a href="#">Build and price</a></span>
+                        <span ><i class="fa-solid fa-chevron-right card-angle-bracket"></i><a href="#">Build and price</a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="blogpost-card-container container">
+                 <div class="blog-card blog-card1 flex">
+                    <div>
+                        <img src="./assets/images/blogimg1.jpg" alt="">
+                        <div class="card-content">
+                            <h2 class="card-subtitle">get our latest news first</h2>
+                            <p>What to find out about our latest models, news, events and competitions before anyone else? Sign up now for exclusive personalised BMW updates sent straight to your inbox.</p>
+                        </div>
+                    </div>
+                    <span ><i class="fa-solid fa-chevron-right card-angle-bracket"></i><a href="#">Sign up for BMW News</a></span>
+                 </div>
+                 <div class="blog-card flex">
+                    <div>
+                        <img src="./assets/images/blogimg2.jpg" alt="">
+                        <div class="card-content">
+                            <h2 class="card-subtitle">get our latest news first</h2>
+                            <p>What to find out about our latest models, news, events and competitions before anyone else? Sign up now for exclusive personalised BMW updates sent straight to your inbox.</p>
+                        </div>
+                    </div>
+                    <span ><i class="fa-solid fa-chevron-right card-angle-bracket"></i><a href="#">Sign up for BMW News</a></span>
+                 </div>
+                 <div class="blog-card flex">
+                    <div>
+                        <img src="./assets/images/blogimg3.jpg" alt="">
+                        <div class="card-content">
+                            <h2 class="card-subtitle">get our latest news first</h2>
+                            <p>What to find out about our latest models, news, events and competitions before anyone else? Sign up now for exclusive personalised BMW updates sent straight to your inbox.</p>
+                        </div>
+                    </div>
+                    <span ><i class="fa-solid fa-chevron-right card-angle-bracket"></i><a href="#">Sign up for BMW News</a></span>
+                 </div>
+                 <div class="blog-card flex">
+                    <div>
+                        <img src="./assets/images/blogimg4.jpg" alt="">
+                        <div class="card-content">
+                            <h2 class="card-subtitle">get our latest news first</h2>
+                            <p>What to find out about our latest models, news, events and competitions before anyone else? Sign up now for exclusive personalised BMW updates sent straight to your inbox.</p>
+                        </div>
+                    </div>
+                    <span ><i class="fa-solid fa-chevron-right card-angle-bracket"></i><a href="#">Sign up for BMW News</a></span>
+                 </div>
+                 <div class="blog-card flex">
+                    <div>
+                        <img src="./assets/images/blogimg5.jpg" alt="">
+                        <div class="card-content">
+                            <h2 class="card-subtitle">get our latest news first</h2>
+                            <p>What to find out about our latest models, news, events and competitions before anyone else? Sign up now for exclusive personalised BMW updates sent straight to your inbox.</p>
+                        </div>
+                    </div>
+                    <span ><i class="fa-solid fa-chevron-right card-angle-bracket"></i><a href="#">Sign up for BMW News</a></span>
+                 </div>
+                 <div class="blog-card flex">
+                    <div>
+                        <img src="./assets/images/blogimg6.jpg" alt="">
+                        <div class="card-content">
+                            <h2 class="card-subtitle">get our latest news first</h2>
+                            <p>What to find out about our latest models, news, events and competitions before anyone else? Sign up now for exclusive personalised BMW updates sent straight to your inbox.</p>
+                        </div>
+                    </div>
+                    <span ><i class="fa-solid fa-chevron-right card-angle-bracket"></i><a href="#">Sign up for BMW News</a></span>
+                 </div>
+                 <div class="blog-card flex">
+                    <div>
+                        <img src="./assets/images/blogimg7.jpg" alt="">
+                        <div class="card-content">
+                            <h2 class="card-subtitle">get our latest news first</h2>
+                            <p>What to find out about our latest models, news, events and competitions before anyone else? Sign up now for exclusive personalised BMW updates sent straight to your inbox.</p>
+                        </div>
+                    </div>
+                    <span ><i class="fa-solid fa-chevron-right card-angle-bracket"></i><a href="#">Sign up for BMW News</a></span>
+                 </div>
+        </section>
+    
+        <section class="sticky-nav-section flex">
+            <ul class="flex">
+                <li class="flex"><a href="#"><i class="fa-regular fa-comment-dots"></i> <span>Book a service</span></a></li>
+                <li class="flex"><a href="#"> <i class="fa-solid fa-car-rear"></i><span>Book a test trive</span></a></li>
+                <li class="flex"><a href="#"><i class="fa-regular fa-circle"></i><span>Build and price</span></a></li>
+                <li class="flex"><a href="#"><i class="fa-regular fa-file-lines"></i> <span>Get a brochure</span></a></li>
+            </ul>
+        </section>
+        <footer>
+            <div class="footer-section">
+                <section class="footer-icons-container flex">
+                    <div class="social-section-wrapper">
+                        <h4 class="social-title">Social Media</h4>
+                        <div class="social-icons flex">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="footer-nav-section">
+                    <div>
+                        <h3 class="footer-nav-title">Contact</h3>
+                        <ul class="footer-nav">
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Contact BMW Financial Services</a></li>
+                            <li><a href="#">Local Genius</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="footer-nav-title">Quick Links</h3>
+                        <ul class="footer-nav">
+                            <li><a href="#">Book a test drive</a></li>
+                            <li><a href="#">Get a brochure</a></li>
+                            <li><a href="#">Subscribe to BMW News</a></li>
+                            <li><a href="#">Book a service</a></li>
+                            <li><a href="#">Online Genius</a></li>
+                            <li><a href="#">BMW Shop</a></li>
+                            <li><a href="#">BMW Recall Information</a></li>
+                            <li><a href="#">Gender Pay Gap Report</a></li>
+                            <li><a href="#">Women in Finance Charter</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="footer-nav-title">Experience BMW</h3>
+                        <ul class="footer-nav">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">BMW Plug-in Hybrid</a></li>
+                            <li><a href="#">BMW M</a></li>
+                            <li><a href="#">BMW i</a></li>
+                            <li><a href="#">BMW Luxury Class</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">BMW.com</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="footer-nav-title">Legal</h3>
+                        <ul class="footer-nav">
+                            <li><a href="#">ConnectedDrive Legal Information</a></li>
+                            <li><a href="#">Services Booking Legal</a></li>
+                            <li><a href="#">Product Safety Enquiry</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <section class="copyright-section flex">
+                <div>
+                    <i style="font-size: 14px" class="fa-regular fa-copyright"></i>
+                    <span>BMW UK 2023</span>
+                </div>
+                <ul class="copyright-nav flex">
+                    <li><a href="#">Legal Notice</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </section>
+        </footer> -->
+</body>
+</html>
