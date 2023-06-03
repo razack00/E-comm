@@ -10,12 +10,14 @@
         document.addEventListener('DOMContentLoaded', () => {
             const user = JSON.parse(localStorage.getItem('user'))
             const form = document.querySelector('form');
+            if(localStorage.getItem("isLoggedIn")) {
+                location.href = 'home.html'
+            }
             
             // when the form is submitted
             form.onsubmit = (e) => {
                 e.preventDefault();
                 const formData = new FormData(form);
-
                 const email = formData.get('email');
                 const password = formData.get('password');
 
@@ -25,11 +27,13 @@
                 }
                 
                 if(user.email === email && user.password === password) {
-                    window.location.href = "index.html";
+                    window.location.href = "home.html";
+
+                    localStorage.setItem('isLoggedIn', true)
                 }
                 else {
+                    const message = document.querySelector('.message').innerHTML = `<span class="error">Invalid details <a href="./signup.html">Sign up</a> if you don't have an account</span>`
                     return
-                    const message = document.querySelector('.message').textContent = 'hello'
                 }
             }
         });
@@ -37,7 +41,7 @@
 </head>
 <body>
     <form action="">
-        <h1>sign In</h1>
+        <h1>Sign In</h1>
         <label for="email">
             <span>Email</span>
             <input type="email" name="email" id="email" placeholder="email">
@@ -48,7 +52,7 @@
             <div class="message">
             </div>
         </label>
-        <span class="message">Invalid detail <a href="./signup.html">Sign up</a> if you don't have an account</span>
+        <div class="message"></div>
         <input type="submit" id="submit" value="Submit">
     </form>
 </body>
